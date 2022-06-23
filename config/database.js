@@ -19,7 +19,8 @@ const sequelize = new Sequelize(database, user, password,
                 require: true,
                 rejectUnauthorized: false
             }
-        }
+        },
+        dialect:'postgres'
     }
 );
 
