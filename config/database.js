@@ -20,7 +20,10 @@ const sequelize = new Sequelize(database, user, password,
                 rejectUnauthorized: false
             }
         },
-        dialect:'postgres'
+        dialect:'postgres',
+        define: {
+            freezeTableName: true
+        }
     }
 );
 
