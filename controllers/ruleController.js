@@ -2,6 +2,10 @@ const ruleService = require('../services/ruleService');
 const couponService = require('../services/couponService');
 
 module.exports = {
+    /**
+     * * controller to create a new rule for a coupon
+     * @param {Request} req
+     */
     newRuleForCoupon: async req => {
         try {
             if (Object.values(req.body).includes('') || Object.values(req.body).includes(' ') || !Object.keys(req.body).length) {
@@ -21,7 +25,6 @@ module.exports = {
             const ruleData = {
                 type, couponId: data.id
             }
-
             // create rule with ruleData;
             const newRule = await ruleService.createRule(ruleData);
             if(newRule.status !== 201) return { status: newRule.status, message: newRule.message }
@@ -29,9 +32,6 @@ module.exports = {
             // activate coupon
             await couponService.updateCoupon(data.id, {isValid: true});
             return await couponService.addRule(data, newRule.data.id)
-
-
-            // return 
         } catch (error) {
             // console.log(error);
             console.log(error.name);

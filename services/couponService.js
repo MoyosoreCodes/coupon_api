@@ -94,6 +94,12 @@ module.exports = {
         }
     },
 
+    /**
+     * * adds rule to a coupon
+     * @param {object} couponData 
+     * @param {number} newRuleId 
+     * @returns 
+     */
     addRule: async (couponData, newRuleId) => {
         try {
             const coupon = await Coupon.update({
@@ -115,6 +121,11 @@ module.exports = {
         }
     },
 
+    /**
+     * * adds discount to a coupon
+     * @param {object} couponData 
+     * @param {number} newDiscountId 
+     */
     addDiscount: async (couponData, newDiscountId) => {
         try {
             // first find coupon data
@@ -136,6 +147,11 @@ module.exports = {
             }
         }
     },
+    /**
+     * * updates coupon data
+     * @param {string} couponId 
+     * @param {object} data 
+     */
     updateCoupon: async (couponId, data) => {
         try {
             const coupon = await Coupon.update(data, {

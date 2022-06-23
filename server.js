@@ -15,6 +15,11 @@ app.use(morgan('dev'))
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+const apiLink = '';
+
+app.get('/', (req, res) => {
+  return res.send(`coupon api running click <a href=${apiLink}> here </a> to view documentation`);
+})
 
 app.use('/cart', require('./routes/carts'));
 app.use('/coupon', require('./routes/coupons'));

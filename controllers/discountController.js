@@ -2,6 +2,10 @@ const discountService = require('../services/discountService');
 const couponService = require('../services/couponService');
 
 module.exports = {
+    /**
+     * * controller to create a new discount for a coupon
+     * @param {Request} req
+     */
     newDiscountForCoupon: async req => {
         try {
             if (Object.values(req.body).includes('') || Object.values(req.body).includes(' ') || !Object.keys(req.body).length) {

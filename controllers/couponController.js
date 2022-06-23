@@ -3,6 +3,10 @@ const ruleService = require('../services/ruleService');
 const discountService = require('../services/discountService');
 
 module.exports = {
+    /**
+     * * controller to create a new a coupon
+     * @param {Request} req
+     */
     newCoupon: async req => {
         try {
             // validations

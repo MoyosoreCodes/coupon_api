@@ -87,6 +87,11 @@ module.exports = {
             }
         }
     },
+    /**
+     * * updates a discount data
+     * @param {object} data 
+     * @param {string} discountId 
+     */
     updateDiscount: async (data, discountId) => {
         try {
             const discount = await Coupon.update({couponId: data}, {
