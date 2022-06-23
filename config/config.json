@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "postgres",
+    "password": "postgres",
+    "database": "coupon",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "postgres",
+    "password": "postgres",
+    "database": "coupon",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "shfhzbutvuxmkz",
+    "password": "8811eee095ab45a347b2ef8711d45511d3ae95a4c3208ffffc4d55f83824985c",
+    "database": "d9s2gurjruonh7",
+    "host": "ec2-44-197-128-108.compute-1.amazonaws.com",
+    "dialect": "postgres"
+  }
+}
