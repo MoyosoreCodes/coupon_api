@@ -4,7 +4,7 @@ require('dotenv').config();
 const user = "shfhzbutvuxmkz";
 const password = "8811eee095ab45a347b2ef8711d45511d3ae95a4c3208ffffc4d55f83824985c";
 const host = "ec2-44-197-128-108.compute-1.amazonaws.com";
-const port = process.env.PG_PORT;
+const port = 5432;
 const database = "d9s2gurjruonh7";
 
 // const isProduction = process.env.NODE_ENV === 'production';

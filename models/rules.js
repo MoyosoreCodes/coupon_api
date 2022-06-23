@@ -13,6 +13,13 @@ Rules.init({
     type: {
         type: DataTypes.TEXT,
         allowNull: false,
+    },
+    couponId: {
+        type: DataTypes.INTEGER,
+        references: {
+            model: 'Coupon',
+            key: 'id',
+        }
     }
 }, {sequelize, timestamps: true})
 
