@@ -21,7 +21,7 @@ Rules.init({
             key: 'id',
         }
     }
-}, {sequelize, timestamps: true})
+}, {sequelize, timestamps: true, modelName: 'Rule'})
 
 // Rules.belongsTo(Coupon, {as: 'coupon'})  
 // Rules.sync({force: true});

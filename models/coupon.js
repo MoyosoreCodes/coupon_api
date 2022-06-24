@@ -48,7 +48,7 @@ Coupon.init({
     //         key: 'id'
     //     }
     // }
-}, {sequelize, timestamps: true});
+}, {sequelize, timestamps: true, modelName: 'Coupon'});
 
 // Coupon.hasMany(Rules, {as: 'rules'});
 // Rules.belongsTo(Coupon, {as: 'coupon'})

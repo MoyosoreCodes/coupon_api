@@ -21,7 +21,7 @@ DiscountTypes.init({
             key: 'id',
         }
     }
-}, {sequelize, timestamps: true})
+}, {sequelize, timestamps: true, modelName: "Discounts"})
 
-DiscountTypes.sync();
+// DiscountTypes.sync();
 module.exports = DiscountTypes;
