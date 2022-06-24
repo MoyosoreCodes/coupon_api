@@ -13,13 +13,6 @@ DiscountTypes.init({
         type: DataTypes.TEXT,
         allowNull: false,
         unique: true,
-    },
-    couponId: {
-        type: DataTypes.INTEGER,
-        references: {
-            model: 'Coupon',
-            key: 'id',
-        }
     }
 }, {sequelize, timestamps: true, modelName: "Discounts"})
 
