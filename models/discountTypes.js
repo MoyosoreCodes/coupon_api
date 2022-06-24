@@ -12,7 +12,6 @@ DiscountTypes.init({
     type: {
         type: DataTypes.TEXT,
         allowNull: false,
-        unique: true,
     }
 }, {sequelize, timestamps: true, modelName: "Discounts"})
 
