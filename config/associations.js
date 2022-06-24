@@ -8,7 +8,7 @@ const syncDB = async (sequelizeInstance) => {
     Coupon.hasMany(DiscountTypes, {as: 'discounts', foreignKey: 'couponId'});
     DiscountTypes.belongsTo(Coupon, {as: 'coupon'});
 
-    await sequelizeInstance.sync();
+    await sequelizeInstance.sync({force:true});
     // await Coupon.sync()
     // await Rules.sync()
     // await DiscountTypes.sync()
